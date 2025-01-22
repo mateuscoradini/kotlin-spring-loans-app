@@ -34,9 +34,6 @@ dependencies {
 
     //Postgres
     implementation("org.postgresql:postgresql")
-    implementation("io.r2dbc:r2dbc-postgresql:0.8.6.RELEASE") // Check for the latest version
-    implementation("org.springframework.boot:spring-boot-starter-data-r2dbc") // Para uso com R2DBC
-
 
     // Jackson for Kotlin
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
@@ -57,33 +54,14 @@ dependencies {
     implementation("io.springfox:springfox-boot-starter:3.0.0")
     implementation("io.springfox:springfox-swagger-ui:3.0.0")
 
-    //implementation("org.springframework.boot:spring-boot-starter-actuator")
-    //implementation("org.springframework.boot:spring-boot-starter-data-redis")
-
-    //implementation("org.springframework.boot:spring-boot-starter-web")
-
-
-    //Docker
-    //developmentOnly("org.springframework.boot:spring-boot-docker-compose:3.1.1")
-
-
-
-
-
-    //implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
-    //implementation("io.springfox:springfox-boot-starter:3.0.0")
-    //implementation("io.springfox:springfox-swagger-ui:3.0.0")
-    //implementation("org.springdoc:springdoc-openapi-webflux-ui:1.6.5")
-    //implementation("org.springdoc:springdoc-openapi-ui:1.6.15")
-    //implementation("org.springdoc:springdoc-openapi-webflux-ui:1.6.15")
-    //implementation("org.springdoc:springdoc-openapi-data-rest:1.6.15")
-    //implementation("org.springdoc:springdoc-openapi-kotlin:1.6.15")
-
     runtimeOnly("io.micrometer:micrometer-registry-prometheus")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
+    testImplementation("io.mockk:mockk:1.13.5")
+    testImplementation("com.h2database:h2")
+
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 

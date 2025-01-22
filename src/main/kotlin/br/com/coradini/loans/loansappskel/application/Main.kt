@@ -8,9 +8,9 @@ import org.springframework.context.annotation.ComponentScan
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories
 
 @SpringBootApplication
-@ComponentScan("br.com.coradini.loans.loansappskel.*")
+@ComponentScan("br.com.coradini.loans")
 @EntityScan("br.com.coradini.loans.loansappskel.domain.entities.*")
-@EnableJpaRepositories(basePackageClasses = [LoanSimulationRepository::class])
+@EnableJpaRepositories
 class Main
 
 fun main(args: Array<String>) {
