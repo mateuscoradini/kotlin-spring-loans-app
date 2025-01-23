@@ -1,0 +1,19 @@
+{
+  "request":{
+     "method":"GET",
+     "urlPathPattern":"/thirdparty/api/weather",
+     "queryParameters":{
+        "cityCode":{
+           "matches":".*"
+        }
+     }
+  },
+  "response":{
+     "status":200,
+     "fixedDelayMilliseconds":2000,
+     "headers":{
+        "Content-Type":"application/json"
+     },
+     "body":"[{\"weather\": \"Clouded\", \"temperature\": \"32\", \"unit\": \"celsius\"}]"
+  }
+}

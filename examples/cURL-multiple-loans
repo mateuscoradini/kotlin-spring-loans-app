@@ -1,0 +1,105 @@
+curl --location 'http://localhost:8080/api/simulation/multiple' \
+--header 'accept: */*' \
+--header 'Content-Type: application/json' \
+--data '[
+    {
+        "birthDate": "1990-01-01",
+        "loanAmount": 1000,
+        "paymentTermMonths": 12
+    },
+    {
+        "birthDate": "1985-06-15",
+        "loanAmount": 2000,
+        "paymentTermMonths": 24
+    },
+    {
+        "birthDate": "2000-03-10",
+        "loanAmount": 5000,
+        "paymentTermMonths": 36
+    },
+    {
+        "birthDate": "1975-08-20",
+        "loanAmount": 3000,
+        "paymentTermMonths": 18
+    },
+    {
+        "birthDate": "1995-12-05",
+        "loanAmount": 1500,
+        "paymentTermMonths": 6
+    },
+    {
+        "birthDate": "1980-07-30",
+        "loanAmount": 4000,
+        "paymentTermMonths": 48
+    },
+    {
+        "birthDate": "1992-09-25",
+        "loanAmount": 2500,
+        "paymentTermMonths": 24
+    },
+    {
+        "birthDate": "1965-04-12",
+        "loanAmount": 3500,
+        "paymentTermMonths": 36
+    },
+    {
+        "birthDate": "1970-11-01",
+        "loanAmount": 4500,
+        "paymentTermMonths": 60
+    },
+    {
+        "birthDate": "1988-02-18",
+        "loanAmount": 6000,
+        "paymentTermMonths": 48
+    },
+    {
+        "birthDate": "1999-05-14",
+        "loanAmount": 7000,
+        "paymentTermMonths": 12
+    },
+    {
+        "birthDate": "2001-10-22",
+        "loanAmount": 8000,
+        "paymentTermMonths": 36
+    },
+    {
+        "birthDate": "1978-06-07",
+        "loanAmount": 9000,
+        "paymentTermMonths": 24
+    },
+    {
+        "birthDate": "1983-03-15",
+        "loanAmount": 10000,
+        "paymentTermMonths": 60
+    },
+    {
+        "birthDate": "1994-12-31",
+        "loanAmount": 11000,
+        "paymentTermMonths": 48
+    },
+    {
+        "birthDate": "1960-08-10",
+        "loanAmount": 12000,
+        "paymentTermMonths": 36
+    },
+    {
+        "birthDate": "1997-04-05",
+        "loanAmount": 13000,
+        "paymentTermMonths": 12
+    },
+    {
+        "birthDate": "1972-01-25",
+        "loanAmount": 14000,
+        "paymentTermMonths": 24
+    },
+    {
+        "birthDate": "1987-07-19",
+        "loanAmount": 15000,
+        "paymentTermMonths": 18
+    },
+    {
+        "birthDate": "2003-11-11",
+        "loanAmount": 16000,
+        "paymentTermMonths": 60
+    }
+]'

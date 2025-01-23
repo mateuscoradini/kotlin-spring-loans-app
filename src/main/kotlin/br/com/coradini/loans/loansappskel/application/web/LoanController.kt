@@ -24,9 +24,8 @@ class LoanController(private val loanService: LoanService) {
 
     @Operation(summary = "Simulate multiple loans")
     @PostMapping("/multiple")
-    fun simulateLoans(@RequestBody requests: List<LoanSimulationRequest>): Flux<ResponseEntity<LoanSimulationResponse>> {
+    fun simulateLoans(@RequestBody requests: List<LoanSimulationRequest>): Flux<LoanSimulationResponse> {
         return loanService.simulateLoans(requests)
-            .map { result -> ResponseEntity.ok(result) }
     }
 
     @GetMapping("/test")
