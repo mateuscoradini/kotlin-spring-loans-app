@@ -1,0 +1,11 @@
+kind: Service 
+apiVersion: v1 
+metadata:
+  name: wiremock 
+spec:
+  type: ClusterIP
+  selector:
+    app: wiremock 
+  ports:
+    - port: 8081 
+      targetPort: 8080

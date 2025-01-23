@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-api-loan
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: springboot-api-loan
+  template:
+    metadata:
+      labels:
+        app: springboot-api-loan
+    spec:
+      containers:
+      - name: springboot-api-loan
+        image: springboot-api-loan:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            cpu: 500m
+            memory: 400Mi
+          limits:
+            cpu: 1000m
+            memory: 1024Mi
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+          initialDelaySeconds: 15
+          periodSeconds: 5
+          timeoutSeconds: 1
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+          initialDelaySeconds: 15
+          periodSeconds: 5

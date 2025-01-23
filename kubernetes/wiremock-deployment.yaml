@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wiremock
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: wiremock
+  template:
+    metadata:
+      labels:
+        app: wiremock
+    spec:
+      containers:
+      - name: wiremock
+        image: wiremock-local:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
+        env:
+        - name: WIREMOCK_OPTIONS
+          value: "--container-threads 500"
+        resources:
+          requests:
+            cpu: 500m
+            memory: 400Mi
+          limits:
+            cpu: 1000m
+            memory: 1024Mi
